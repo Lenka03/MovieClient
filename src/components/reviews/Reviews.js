@@ -21,8 +21,8 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
 
         try
         {
-            const response = await api.post("/api/reviews",{reviewBody: rev.value, imdbId: movieId}); 
-            const updatedReviews = reviews != null ? [...reviews, { body: rev.value }]: [{ body: rev.value }];
+            const response = await api.post("/api/reviews",{reviewBody:rev.value, imdbId:movieId}); 
+            const updatedReviews = [{ body: rev.value }];
             rev.value = "";    
             setReviews(updatedReviews);
         }
@@ -57,6 +57,22 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
                     </>
                 }
                 {
+                    movie?.reviewIds.map((sub) => {
+                        return(
+                            <>
+                                <Row>
+                                    <Col>{sub.body}</Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <hr />
+                                    </Col>
+                                </Row>                                
+                            </>
+                        )
+                    })
+                }
+                {
                     reviews?.map((r) => {
                         return(
                             <>
@@ -72,6 +88,7 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
                         )
                     })
                 }
+
             </Col>
         </Row>
         <Row>
@@ -83,4 +100,4 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
   )
 }
 
-export default Reviews;
+export default Reviews
