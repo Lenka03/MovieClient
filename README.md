@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Movie Reviews Application - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+The frontend of the Movie Reviews Application is built using React.js. It connects to a remote API and MongoDB database to display and manage movie data. This part of the application handles user interactions, displaying movies, and allowing users to submit reviews.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- React.js
+- Bootstrap
+- Axios
+- Font Awesome
+- React Bootstrap
+- Material UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the Repository**: 
+   ```bash
+   git clone https://github.com/Lenka03/MovieClient.git
 
-### `npm test`
+2. **Install Dependencies**: 
+   ```bash
+   npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Run the Application**: 
+   ```bash
+   npm dev start
+  - *Access the frontend at localhost:3000.*
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Home Component: The landing page, displaying a carousel of movies.
+- Hero Component: A child component of Home, responsible for displaying the movie carousel with styling and navigation features.
+- Trailer Component: Plays movie trailers using React Player.
+- Reviews Component: Allows users to submit and view reviews for movies.
+- Axios Configuration: HTTP requests are handled using Axios, with configurations set in src/api/axiosConfig.js.
+- Routing: Managed using React Router, with route mappings defined for different components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Movie Carousel: Displays a list of movies in a carousel format using Material UI.
+- Play Trailer: Users can click a play button on each carousel item to play a movie trailer using React Player.
+- Submit Reviews: Users can submit reviews for movies, which are saved to the MongoDB database via API requests.
 
-### `npm run eject`
+## Styling
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Bootstrap: Used for layout and styling.
+- Custom CSS: Additional styling applied through hero.css and other CSS files.
+- Font Awesome: Integrated for iconography.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Conclusion
+This frontend provides a dynamic user interface for interacting with the [moviesAPI](https://github.com/Lenka03/moviesAPI) (Movie Reviews Application's backend API), showcasing the power of React.js in building responsive and interactive web applications.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
